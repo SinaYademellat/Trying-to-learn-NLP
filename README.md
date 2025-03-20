@@ -3,8 +3,9 @@
 # هدف
 من در تلاشم که کمی پردازش زبان طبیعی یاد بگیریم و این مخزن برای همین کار است.
 
-برای همین کار دوست دارم با آهنگ ها و تویت های  علی سورنا-[Ali Sorena](#https://en.wikipedia.org/wiki/Ali_Sorena)- است.
+برای همین کار دوست دارم با آهنگ ها و تویت های  علی سورنا [Ali Sorena](#https://en.wikipedia.org/wiki/Ali_Sorena) است.
 
+https://en.wikipedia.org/wiki/Ali_Sorena
 ---
 
 # مراحل
