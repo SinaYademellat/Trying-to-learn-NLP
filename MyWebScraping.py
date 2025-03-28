@@ -28,6 +28,27 @@ class MyWebScraping:
                 print('~'*20)
             print('#'*50)
 
+    def save_txt(self,path_txt:str  ,list_of_text ):
+        with open(path_txt,'w' , encoding="utf-8") as f:
+            for sub_part in list_of_text : 
+                for main_txt_is in sub_part:
+                    text_is = main_txt_is.text
+                    if(len(text_is) == 0 ):
+                        continue    
+                    f.write(text_is)
+                    f.write('\n')
+
+    def run_it(self,main_url:str,all_div_need:list ,paht_is)->None:
+        # part 1
+        self.url = main_url
+        self.make_soup()
+        # part 2
+        my_list  = self.make_list_of_text(all_div_need)
+        # part 3
+        self.save_txt(paht_is,list_of_text=my_list)
+        
+    # --------------------------------
+
     def my_test(self) -> list:
         self.url = "https://genius.com/Ali-sorena-morse-lyrics"
         self.make_soup()
@@ -43,18 +64,7 @@ class MyWebScraping:
         self.show_text(self.make_list_of_text(self.my_test()))
 
     def my_test_2(self):
+        my_list = self.make_list_of_text(self.my_test())
+        self.save_txt('demo.txt',list_of_text=my_list)
 
-        list_of_text = self.make_list_of_text(self.my_test())
-        with open('demo.txt','w' , encoding="utf-8") as f:
-            for sub_part in list_of_text : 
-                for main_txt_is in sub_part:
-                    text_is = main_txt_is.text
-                    if(len(text_is) == 0 ):
-                        continue    
-                    f.write(text_is)
-                    f.write('\n')
-
-if( __name__ == '__main__' ):
-        A = MyWebScraping()
-        # A.my_test_1()
-        A.my_test_2()
+    # --------------------------------
